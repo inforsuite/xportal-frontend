@@ -14,7 +14,8 @@
     "app"
   ],
   "scripts": {
-    "postinstall": "node script/modifyFormItem.js"
+    "postinstall": "node script/modify-formItem.js",
+    "prepublishOnly": "node script/syn-npmignore.js"
   },
   "dependencies": {
     "@d2-projects/d2-crud": "^2.1.0",
