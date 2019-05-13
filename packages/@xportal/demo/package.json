@@ -5,9 +5,9 @@
   "scripts": {
     "serve": "vue-cli-service serve --open",
     "start": "http-server target/dist -s -o",
-    "build": "vue-cli-service build --modern",
-    "build:nomock": "vue-cli-service build --modern --mode nomock",
-    "build:travis": "vue-cli-service build --modern --mode travis",
+    "build": "vue-cli-service build",
+    "build:nomock": "vue-cli-service build --mode nomock",
+    "build:travis": "vue-cli-service build --mode travis",
     "lint": "vue-cli-service lint --fix",
     "inspect": "vue-cli-service inspect > inspect-dev.log && vue-cli-service inspect --mode production > inspect-pro.log",
     "test": "npm run test:unit",
