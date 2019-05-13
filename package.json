@@ -1,0 +1,11 @@
+{
+  "name": "root",
+  "private": true,
+  "workspaces": [
+    "packages/@xportal/*",
+    "packages/test/*"
+  ],
+  "devDependencies": {
+    "lerna": "^3.13.4"
+  }
+}
