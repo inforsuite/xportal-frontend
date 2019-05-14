@@ -1,5 +1,5 @@
 const fs = require('fs')
-const src = 'node_modules/element-ui/packages/form/src/form-item.vue'
+const src = '../node_modules/element-ui/packages/form/src/form-item.vue'
 const target = 'components/extends/form-item.vue'
 const exp = /<template>[\d\D]*<\/template>/
 

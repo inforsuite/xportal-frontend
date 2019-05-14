@@ -1,6 +1,6 @@
 // const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 const TerserPlugin = require('terser-webpack-plugin')
-const ModularWebpackPlugin = require('./scripts/modular-webpack-plugin')
+const ModularWebpackPlugin = require('./script/modular-webpack-plugin')
 
 // 拼接路径
 const resolve = dir => require('path').join(__dirname, dir)
@@ -93,7 +93,7 @@ module.exports = {
       .rule('modular')
       .test(/modular\.config$/)
       .use('modular-loader')
-      .loader('./scripts/modular-loader')
+      .loader('./script/modular-loader')
       .end()
 
     // svg
@@ -101,7 +101,7 @@ module.exports = {
     svgRule.uses.clear()
     svgRule
       .include
-      .add(resolve('node_modules/@xportal/frame/assets/svg-icons/icons'))
+      .add(resolve('../frame/assets/svg-icons/icons'))
       .end()
       .use('svg-sprite-loader')
       .loader('svg-sprite-loader')
@@ -115,7 +115,7 @@ module.exports = {
     imagesRule
       .test(/\.(png|jpe?g|gif|webp|svg)(\?.*)?$/)
       .exclude
-      .add(resolve('node_modules/@xportal/frame/assets/svg-icons/icons'))
+      .add(resolve('../frame/assets/svg-icons/icons'))
       .end()
 
     // 重新设置 alias

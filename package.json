@@ -1,11 +1,15 @@
 {
-  "name": "root",
+  "name": "@xportal/frontend",
+  "version": "0.3.0",
+  "license": "MIT",
   "private": true,
   "workspaces": [
-    "packages/@xportal/*",
-    "packages/test/*"
+    "frame",
+    "demo"
   ],
-  "devDependencies": {
-    "lerna": "^3.13.4"
+  "scripts": {
+    "demo": "yarn workspace @xportal/demo serve",
+    "test": "yarn workspaces run test",
+    "frame:publish": "yarn workspace @xportal/frame publish"
   }
 }

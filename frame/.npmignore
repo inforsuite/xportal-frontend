@@ -1,9 +1,20 @@
-script/
+/demo/
+/script/
+/test/
+.browserslistrc
+.editorconfig
+.eslintrc.js
+.travis.yml
+babel.config.js
+jest.config.js
+postcss.config.js
+sonar-project.properties
 
 ### .gitignore ###
 .DS_Store
 node_modules
 dist/
+bin/
 target/
 coverage/
 

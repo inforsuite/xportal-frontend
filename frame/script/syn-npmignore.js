@@ -1,5 +1,5 @@
 const fs = require('fs')
-const src = '../../../.gitignore'
+const src = '../.gitignore'
 const target = '.npmignore'
 const flag = '### .gitignore ###'
 
@@ -11,7 +11,7 @@ fs.readFile(target, 'utf8', function (err, data) {
     return console.error(err)
   }
   const p = data.indexOf(flag)
-  if ( p >= 0 ) {
+  if (p >= 0) {
     data = data.substring(0, p + flag.length)
   } else {
     data += '\n' + flag
