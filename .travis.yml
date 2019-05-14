@@ -13,14 +13,11 @@ before_install:
 
 jobs:
   include:
-    - stage: build demo
+    - stage: deploy to github
       if: branch = master
       node_js: stable
       script:
         - yarn build
-    - stage: deploy to github
-      if: branch = master
-      node_js: stable
       deploy:
         provider: pages
         local-dir: demo/dist
