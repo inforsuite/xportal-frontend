@@ -8,6 +8,7 @@
     "demo"
   ],
   "scripts": {
+    "start": "yarn workspace @xportal/demo start",
     "build": "yarn workspace @xportal/demo build",
     "demo": "yarn workspace @xportal/demo serve",
     "test": "yarn workspace @xportal/demo test",
