@@ -6,5 +6,11 @@
   "workspaces": [
     "frame",
     "demo"
-  ]
+  ],
+  "scripts": {
+    "build": "yarn workspace @xportal/demo build",
+    "demo": "yarn workspace @xportal/demo serve",
+    "test": "yarn workspace @xportal/demo test",
+    "frame:publish": "yarn workspace @xportal/frame publish"
+  }
 }
