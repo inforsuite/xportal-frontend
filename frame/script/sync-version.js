@@ -28,7 +28,7 @@ if (!version) {
 
 if (!fs.existsSync(sonarPath)) {
   console.log(chalk.yellow('skipped: sonar-project.properties'))
-  return
+  process.exit(0)
 }
 const sonarFile = fs.readFileSync(sonarPath, 'utf8')
 
@@ -36,7 +36,7 @@ const sonarVersionRegex = /sonar\.projectVersion=(.*)/
 const match = sonarFile.match(sonarVersionRegex)
 if (!match) {
   console.log(chalk.red('sonar-project.properties file doesn\'t have a version number. Fix this and run again.'))
-  return
+  process.exit(0)
 }
 
 const oldSonarVersionString = match[0]

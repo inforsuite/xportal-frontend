@@ -5,18 +5,17 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve --open",
-    "start": "http-server target/dist -s -o",
+    "start": "http-server dist -s -o",
     "build": "vue-cli-service build --modern",
     "build:nomock": "vue-cli-service build --modern --mode nomock",
     "build:travis": "vue-cli-service build --modern --mode travis",
     "lint": "vue-cli-service lint --fix",
-    "inspect": "vue-cli-service inspect > target/inspect-dev.log && vue-cli-service inspect --mode production > target/inspect-pro.log",
-    "test": "npm run test:unit",
+    "inspect": "vue-cli-service inspect > inspect-dev.log && vue-cli-service inspect --mode production > inspect-pro.log",
+    "test": "yarn test:unit",
     "test:unit": "vue-cli-service test:unit",
-    "sync-version": "node scripts/sync-version.js",
-    "prestart": "npm run build",
-    "pretest:unit": "node scripts/fix-jest-util-bug.js",
-    "postinstall": "node scripts/modifyFormItem.js && npm run sync-version"
+    "sync-version": "node script/sync-version.js",
+    "prestart": "yarn build",
+    "postinstall": "yarn sync-version"
   },
   "dependencies": {
     "@d2-projects/d2-crud": "^2.1.0",

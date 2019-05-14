@@ -1,5 +1,5 @@
 const fs = require('fs')
-const src = '.gitignore'
+const src = '../.gitignore'
 const target = '.npmignore'
 const flag = '### .gitignore ###'
 

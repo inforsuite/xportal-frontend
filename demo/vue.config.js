@@ -1,6 +1,6 @@
 // const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 const TerserPlugin = require('terser-webpack-plugin')
-const ModularWebpackPlugin = require('./scripts/modular-webpack-plugin')
+const ModularWebpackPlugin = require('./script/modular-webpack-plugin')
 
 // 拼接路径
 const resolve = dir => require('path').join(__dirname, dir)
@@ -14,7 +14,7 @@ module.exports = {
   // publicPath 使用相对路径可以满足大多数情况需求
   // 如遇特殊情况满足不了请调整该值，请参考Vue Cli文档中关于“相对 publicPath 的限制”：https://cli.vuejs.org/zh/config/#publicpath
   publicPath: process.env.NODE_ENV === 'production' ? '' : '/',
-  outputDir: 'target/dist',
+  outputDir: 'dist',
   assetsDir: 'static',
   lintOnSave: true,
   productionSourceMap: false,
@@ -93,7 +93,7 @@ module.exports = {
       .rule('modular')
       .test(/modular\.config$/)
       .use('modular-loader')
-      .loader('./scripts/modular-loader')
+      .loader('./script/modular-loader')
       .end()
 
     // svg
@@ -101,7 +101,7 @@ module.exports = {
     svgRule.uses.clear()
     svgRule
       .include
-      .add(resolve('node_modules/@xportal/frame/assets/svg-icons/icons'))
+      .add(resolve('../frame/assets/svg-icons/icons'))
       .end()
       .use('svg-sprite-loader')
       .loader('svg-sprite-loader')
@@ -115,7 +115,7 @@ module.exports = {
     imagesRule
       .test(/\.(png|jpe?g|gif|webp|svg)(\?.*)?$/)
       .exclude
-      .add(resolve('node_modules/@xportal/frame/assets/svg-icons/icons'))
+      .add(resolve('../frame/assets/svg-icons/icons'))
       .end()
 
     // 重新设置 alias
