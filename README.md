@@ -1,5 +1,6 @@
 # XPortal Web Frame ([Modular](https://github.com/inforsuite/xportal-frontend))
 
+[![Build Status](https://travis-ci.org/inforsuite/xportal-frontend.svg?branch=master)](https://travis-ci.org/inforsuite/xportal-frontend)
 ![GitHub package version](https://img.shields.io/github/package-json/v/inforsuite/xportal-frontend.svg)
 ![npm](https://img.shields.io/npm/v/@xportal/frame.svg)
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/inforsuite/xportal-frontend.svg)
