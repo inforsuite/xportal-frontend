@@ -1,6 +1,6 @@
 // const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 const TerserPlugin = require('terser-webpack-plugin')
-const ModularWebpackPlugin = require('./script/modular-webpack-plugin')
+const ModularWebpackPlugin = require('modular-webpack-plugin')
 
 // 拼接路径
 const resolve = dir => require('path').join(__dirname, dir)
@@ -93,7 +93,7 @@ module.exports = {
       .rule('modular')
       .test(/modular\.config$/)
       .use('modular-loader')
-      .loader('./script/modular-loader')
+      .loader('modular-webpack-plugin/modular-loader')
       .end()
 
     // svg

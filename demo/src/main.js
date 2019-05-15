@@ -1,9 +1,13 @@
+import Logger from 'js-logger'
 import Modular from 'modular-core'
 import modules from '../modular.config' // 通过 ModularLoader 加载所有模块配置
 import util from '@xportal/frame/libs/util'
 import App from '@/App'
 import menu from '@/app/menu'
 import setting from '@/setting'
+
+Logger.useDefaults()
+const logger = Logger.get('application.Main')
 
 // 应用配置
 const application = {
@@ -41,10 +45,13 @@ const modular = new Modular({
 
 window.$modular = Object.freeze(modular)
 
+logger.debug('Application staring ...')
 // 应用启动
 modular.start()
 
 const logs = modular.getLogs()
 if (logs && logs.length && logs.length > 0) {
-  logs.forEach(log => util.log.danger(log))
+  logs.forEach(log => logger.error(log))
 }
+
+logger.debug('Application stared')
