@@ -76,7 +76,7 @@ export default {
 
   onError (err) {
     router.app.$message.error(err.message)
-    Vue.config.errorHandler(err, router, err.message)
+    Vue.config.errorHandler(err, 'router', err.message)
   }
 
 }

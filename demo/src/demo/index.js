@@ -5,7 +5,7 @@ import routes from './routes'
 
 export default {
   name: 'demo',
-  dependencies: ['frame'],
+  dependencies: ['@xportal/frame'],
   extensions: {
     'vue.router.routes': {
       parent: 'frame',

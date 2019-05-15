@@ -43,3 +43,8 @@ window.$modular = Object.freeze(modular)
 
 // 应用启动
 modular.start()
+
+const logs = modular.getLogs()
+if (logs && logs.length && logs.length > 0) {
+  logs.forEach(log => util.log.danger(log))
+}

@@ -14,7 +14,7 @@ import d2AdminVuexModule from './store/d2admin'
 session.storage = 'session'
 
 export default {
-  name: 'frame',
+  name: '@xportal/frame',
   dependencies: ['vue'],
   extensions: {
     'vue.plugins': [vuePlugin, d2AdminVuePlugin],
