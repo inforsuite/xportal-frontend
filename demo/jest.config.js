@@ -1,40 +1,39 @@
 module.exports = {
-  'moduleFileExtensions': [
+  moduleFileExtensions: [
     'js',
     'jsx',
     'json',
     'vue'
   ],
-  'transform': {
+  transform: {
     '^.+\\.vue$': 'vue-jest',
     '.+\\.(css|styl|less|sass|scss|svg|png|jpg|ttf|woff|woff2)$': 'jest-transform-stub',
     '^.+\\.jsx?$': 'babel-jest'
   },
-  'transformIgnorePatterns': [
+  transformIgnorePatterns: [
     '<rootDir>/node_modules/(?!(modular-core|modular-vue|@xportal|vuex-along))'
   ],
-  'moduleNameMapper': {
+  moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/src/$1',
-    'serverConfig': '<rootDir>/tests/mock/server.config.js',
-    'logger': '<rootDir>/tests/mock/logger.js'
+    'serverConfig': '<rootDir>/tests/mock/server.config.js'
   },
-  'snapshotSerializers': [
+  snapshotSerializers: [
     'jest-serializer-vue'
   ],
-  'testMatch': [
+  testMatch: [
     '**/tests/unit/**/*.spec.(js|jsx|ts|tsx)|**/__tests__/*.(js|jsx|ts|tsx)'
   ],
-  'collectCoverageFrom': [
+  collectCoverageFrom: [
     '<rootDir>/src/**/*.{js,jsx,json,vue}'
   ],
-  'coverageReporters': [
+  coverageReporters: [
     'lcov',
     'html'
   ],
-  'setupFiles': [
+  setupFiles: [
     '<rootDir>/tests/setup/requireContextRegister'
   ],
-  'browser': true,
-  'collectCoverage': true,
-  'testURL': 'http://localhost/'
+  browser: true,
+  collectCoverage: true,
+  testURL: 'http://localhost/'
 }
