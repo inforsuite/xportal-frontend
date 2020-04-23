@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([["chunk-2d0c1004"],{"43d3":function(t,e,n){"use strict";n.r(e);var a=n("a6c2"),c=Object(a.a)({},function(){var t=this.$createElement,e=this._self._c||t;return e("d2-container",{staticClass:"page"},[e("d2-page-cover",{attrs:{title:"I AM CVICSE ADMIN","sub-title":"企业内部应用前端模板"}})],1)},[],!1,null,null,null).exports;e.default=c}}]);
