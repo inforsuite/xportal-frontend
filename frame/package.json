@@ -22,6 +22,7 @@
     "@d2-projects/vue-filters-date": "^1.0.9",
     "axios": "^0.19.2",
     "better-scroll": "^1.15.2",
+    "core-js": "^3.6.5",
     "dayjs": "^1.8.25",
     "element-ui": "~2.10.1",
     "flex.css": "^1.1.7",
@@ -46,21 +47,20 @@
     "vuex": "^3.2.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.9.0",
-    "@babel/plugin-syntax-dynamic-import": "^7.8.3",
     "@vue/cli-plugin-babel": "^4.3.1",
     "@vue/cli-plugin-eslint": "^4.3.1",
     "@vue/cli-plugin-unit-jest": "^4.3.1",
     "@vue/cli-service": "^4.3.1",
     "@vue/eslint-config-standard": "^5.1.2",
     "@vue/test-utils": "^1.0.0-beta.29",
-    "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "^10.1.0",
-    "babel-jest": "^25.4.0",
     "babel-plugin-component": "^1.1.1",
     "eslint": "^6.8.0",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.0",
     "eslint-plugin-vue": "^6.2.2",
-    "jest": "^25.4.0",
     "vue-template-compiler": "^2.6.11"
   }
 }
