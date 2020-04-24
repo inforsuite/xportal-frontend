@@ -10,6 +10,7 @@
   "scripts": {
     "start": "yarn workspace @xportal/demo start",
     "build": "yarn workspace @xportal/demo build",
+    "lint": "yarn workspaces run lint",
     "demo": "yarn workspace @xportal/demo serve",
     "test": "yarn workspaces run test",
     "frame:publish": "yarn workspace @xportal/frame publish"

@@ -1,5 +1,4 @@
 // const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
-const TerserPlugin = require('terser-webpack-plugin')
 const ModularWebpackPlugin = require('modular-webpack-plugin')
 
 // 拼接路径
@@ -29,7 +28,7 @@ module.exports = {
     loaderOptions: {
       // 设置 scss 公用变量文件
       sass: {
-        prependData: `@import '@xportal/frame/assets/style/public.scss';`
+        prependData: '@import \'@xportal/frame/assets/style/public.scss\';'
       }
     }
   },
@@ -46,32 +45,32 @@ module.exports = {
         config => config.devtool('cheap-source-map')
       )
       // 非开发环境
-      .when(process.env.NODE_ENV !== 'development', config => {
-        config
-          .plugin('html')
-          .tap(args => {
-            // 压缩 html 中的 CSS
-            args[0].minify.minifyCSS = true
-            return args
-          })
+      // .when(process.env.NODE_ENV !== 'development', config => {
+      //   config
+      //     .plugin('html')
+      //     .tap(args => {
+      //       // 压缩 html 中的 CSS
+      //       args[0].minify.minifyCSS = true
+      //       return args
+      //     })
 
-        // config.optimization
-        //   .minimizer([
-        //     new TerserPlugin({
-        //       cache: true,
-        //       parallel: true,
-        //       terserOptions: {
-        //         // 移除 console
-        //         // 参考 https://github.com/webpack-contrib/terser-webpack-plugin
-        //         compress: {
-        //           drop_console: true,
-        //           drop_debugger: true,
-        //           pure_funcs: ['console.log']
-        //         }
-        //       }
-        //     })
-        //   ])
-      })
+    // config.optimization
+    //   .minimizer([
+    //     new TerserPlugin({
+    //       cache: true,
+    //       parallel: true,
+    //       terserOptions: {
+    //         // 移除 console
+    //         // 参考 https://github.com/webpack-contrib/terser-webpack-plugin
+    //         compress: {
+    //           drop_console: true,
+    //           drop_debugger: true,
+    //           pure_funcs: ['console.log']
+    //         }
+    //       }
+    //     })
+    //   ])
+    // })
 
     // markdown
     config.module

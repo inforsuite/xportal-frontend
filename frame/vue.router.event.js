@@ -51,7 +51,7 @@ export default {
       } else {
       // 没有登录的时候跳转到登录界面
       // 携带上登陆成功之后需要跳转的页面完整路径
-        let path = { name: 'login' }
+        const path = { name: 'login' }
         if (to.fullPath !== '/' && to.fullPath !== '/index') {
           path.query = { redirect: to.fullPath }
         }

@@ -97,7 +97,7 @@ export default {
           vertexs[name] = v
           if (module.extensionPoints) {
             const ps = module.extensionPoints
-            for (let key in ps) {
+            for (const key in ps) {
               const p = graph.insertVertex(parent, null, key, 20, 20, ew, eh, 'extensionPoint')
               graph.insertEdge(parent, null, '', p, v, 'extension')
               points[key] = p
@@ -105,7 +105,7 @@ export default {
           }
           if (module.extensions) {
             const ext = module.extensions
-            for (let key in ext) {
+            for (const key in ext) {
               if (points[key]) {
                 graph.insertEdge(parent, null, '', v, points[key], 'extension')
               } else {
@@ -157,13 +157,12 @@ export default {
         //   fastOrganicLayout
         // ], hierarchicalLayout)
 
-        let layout
-        // layout = circleLayout
-        // layout = fastOrganicLayout
-        layout = hierarchicalLayout
-        // layout = compactTreeLayout
-        // layout = edgeLabelLayout
-        // layout = compositeLayout
+        // const layout = circleLayout
+        // const layout = fastOrganicLayout
+        const layout = hierarchicalLayout
+        // const layout = compactTreeLayout
+        // const layout = edgeLabelLayout
+        // const layout = compositeLayout
         layout.execute(parent)
       } finally {
         // Updates the display

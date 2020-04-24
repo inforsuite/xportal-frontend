@@ -17,7 +17,7 @@ import Page from '@xportal/frame/mixins/BasePage'
  */
 export default {
   name: 'demo-params',
-  mixins: [ Page ], // 这是实现本功能的核心代码，就这一行
+  mixins: [Page], // 这是实现本功能的核心代码，就这一行
   components: {
     Input
   },

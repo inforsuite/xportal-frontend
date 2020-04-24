@@ -15,7 +15,7 @@ module.exports = {
   ],
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/src/$1',
-    'serverConfig': '<rootDir>/tests/mock/server.config.js'
+    serverConfig: '<rootDir>/tests/mock/server.config.js'
   },
   snapshotSerializers: [
     'jest-serializer-vue'

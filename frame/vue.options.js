@@ -3,7 +3,7 @@ import { frameRoute } from './routes'
 export default {
   created () {
     // 处理路由 得到每一级的路由设置
-    this.$store.commit('d2admin/page/init', [ frameRoute ])
+    this.$store.commit('d2admin/page/init', [frameRoute])
   },
   mounted () {
     // 用户登录后从数据库加载一系列的设置
