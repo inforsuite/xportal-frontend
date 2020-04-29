@@ -44,34 +44,6 @@ module.exports = {
         // sourcemap不包含列信息
         config => config.devtool('cheap-source-map')
       )
-      // 非开发环境
-      // .when(process.env.NODE_ENV !== 'development', config => {
-      //   config
-      //     .plugin('html')
-      //     .tap(args => {
-      //       // 压缩 html 中的 CSS
-      //       args[0].minify.minifyCSS = true
-      //       return args
-      //     })
-
-    // config.optimization
-    //   .minimizer([
-    //     new TerserPlugin({
-    //       cache: true,
-    //       parallel: true,
-    //       terserOptions: {
-    //         // 移除 console
-    //         // 参考 https://github.com/webpack-contrib/terser-webpack-plugin
-    //         compress: {
-    //           drop_console: true,
-    //           drop_debugger: true,
-    //           pure_funcs: ['console.log']
-    //         }
-    //       }
-    //     })
-    //   ])
-    // })
-
     // markdown
     config.module
       .rule('md')
