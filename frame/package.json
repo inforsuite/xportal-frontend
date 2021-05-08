@@ -31,7 +31,7 @@
     "hotkeys-js": "^3.7.6",
     "js-cookie": "^2.2.1",
     "js-logger": "^1.6.0",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.21",
     "lowdb": "^1.0.0",
     "mockjs": "^1.1.0",
     "modular-core": "^1.4.0",
