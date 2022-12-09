@@ -39,7 +39,7 @@
     "mxgraph": "^4.1.1",
     "nprogress": "^0.2.0",
     "particles.js": "^2.0.0",
-    "qs": "^6.9.3",
+    "qs": "^6.9.7",
     "regenerator-runtime": "^0.13.5",
     "screenfull": "^5.0.2",
     "ua-parser-js": "^0.7.21",
